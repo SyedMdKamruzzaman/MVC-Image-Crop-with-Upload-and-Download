@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "ProfilePhoto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ProfilePhoto</h2>
+
+
+
+
+<section id="avatar-crop-box">
+    <p>
+        <div>
+            <img src="@ViewBag.ProfilePic" id="crop-avatar-target-pp" alt="Uploaded image" style="width:200px;height:200px" />
+        </div>
+        <div id="preview-pane">
+            <div class="preview-container">
+                <img src="@ViewBag.ProfilePic" id="prevpp" class="jcrop-preview" alt="Preview" />
+
+            </div>
+        </div>
+
+    </p>
+    <p>
+       
+        <button class="btn btn-default" onclick=" downloadPPCrop() ">Download Crop Photo</button>
+    </p>
+</section>
+<div id="avatar-result" class="hidden">
+    <img src="" alt="Final Image" />
+</div>
+
+@section Scripts {
+
+    <script src="~/Scripts/site.pp.js" type="text/javascript"></script>
+}
+

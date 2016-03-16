@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "ClaimsIdentityFactory Page";
+}
+<b>
+    My Claims are as follows
+</b>
+@{
+
+    System.Security.Claims.ClaimsPrincipal claimsPrincipal = Context.User as System.Security.Claims.ClaimsPrincipal;
+    System.Security.Claims.ClaimsIdentity id = claimsPrincipal.Identity as System.Security.Claims.ClaimsIdentity;
+    foreach (var claim in id.Claims)
+    {
+        <p>Claim: @claim.ToString()</p>
+    }
+}

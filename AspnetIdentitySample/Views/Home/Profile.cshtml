@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<b>
+    My Profile information is as following:
+</b>
+
+   
+     
+   <p>
+        FirstName = @ViewBag.FirstName
+    </p>
+
+<p>
+
+    <img src="@ViewBag.ProfilePic" id="profimg">
+
+</p>
+
+<h2>Upload</h2>
+
+@{ Html.RenderPartial("_ProfilePartial"); }
+
+
